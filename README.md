@@ -59,11 +59,6 @@ Start the server
   npm start
 ```
 
-
-## Demo
-
-👉 https://issue-tracker-p7xy.onrender.com/
-
 ## API Endpoints
 
 ### Doctor routes
