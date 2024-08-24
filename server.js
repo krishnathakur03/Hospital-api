@@ -20,7 +20,7 @@ app.use('/api/patients', jwtAuth, patientRouter); // using JWT auth middlewre so
 app.use("/api/reports", jwtAuth, reportRouter);
 
 // rest of all routes will reffer here
-app.use('/', (req, res)=>{
+app.get('/', (req, res)=>{
     res.send('Welcome to Hospital Api')
 })
 

@@ -32,7 +32,7 @@ export const createReport = async (req, res)=> {
 
     const report = await createReportRepo({patient: patientId, doctor: doctorId, ...req.body});
     if(report.status){
-        return res.status(201).json({status: true, res: {msg: "Report is created", res: report.res}})
+        return res.status(201).json({status: true, res: {msg: "Report is created", report: report.res}})
     }
 
     return res.status(401).json({status: false, error: report.errors})
@@ -44,7 +44,7 @@ export const allReports = async (req, res) => {
 
     const reports = await reportsRepo(patientId);
     if(reports.status) {
-        return res.status(200).json({status: true, res: {msg: "All reports are here", res: reports.res}})
+        return res.status(200).json({status: true, res: {msg: "All reports are here", reports: reports.res}})
     }
     return res.status(404).json({status: false, error: reports.errors})
 }

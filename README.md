@@ -101,7 +101,8 @@ Start the server
     - **Request body:**
     ```bash
         {
-            "status": "status" (eg. "positive-admit")
+            "status": "status" (eg. "positive-admit"),
+            "date": (eg. "08/21/2024") // optional otherwise by default 
         }
     ```
 

@@ -9,7 +9,7 @@ export const connectToMongoose = async ()=>{
         console.log("MongoDB connected using mongoose");
     } catch (error) {
         console.log(error);
-        throw new error ('Failed to connect MongoDB')
+        return error
     }
     
 }
